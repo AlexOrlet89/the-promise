@@ -14,7 +14,13 @@ export async function asyncGetCards() {
 /**
  * TODO: Exercise 2: use `fetch` & `.then` syntax to get the same data from the first exercise.
  */
+export function fetchThenCards() {
+  const res = fetch('https://futuramaapi.herokuapp.com/api/quotes/1').then(
+    (res) => res.json().then((result) => console.log('fetchThenCards', result))
+  );
 
+  // console.log('fetchThenCards', res)
+}
 /**
  * TODO: Exercise 3: use `fetch`, async/await, and a try/catch statement to get data from an API and handle errors
  */
