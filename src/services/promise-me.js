@@ -61,11 +61,20 @@ export async function fetchAsyncTryFinallyCards() {
 /**
  * TODO: Exercise 6: use `fetch`, `.then`, `.catch`. and `.finally` to get the same data from exercise 5 while handling errors and calling console.log('All done!') upon completion
  */
-
+export function fetchThenCatchFinallyCards() {
+  const res = fetch('https://futuramaapi.herokuapp.com/api/quotes/1')
+    .then((res) => res.json())
+    .then((result) => console.log('fetchAsyncTryFinallyCards', result))
+    .catch((error) => window.alert(error.message))
+    .finally(() => console.log('alright im out'));
+}
 /**
- * TODO: Exercise 7: Call your function from exercise 7 using .then
+ * TODO: Exercise 7: Call your function from exercise 5 using .then
  */
-
+export function fetchFunction5ThenCards() {
+  const res = fetchAsyncTryFinallyCards().then(console.log(res));
+  // console.log(res);
+}
 /**
  * TODO: Exercise 8: Call your function from exercise 6 using async/await
  */
