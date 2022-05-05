@@ -24,6 +24,15 @@ export function fetchThenCards() {
 /**
  * TODO: Exercise 3: use `fetch`, async/await, and a try/catch statement to get data from an API and handle errors
  */
+export async function fetchAsyncTryCards() {
+  try {
+    const res = await fetch('https://futuramaapi.herokuapp.com/api/quotes/1');
+    const results = await res.json();
+    console.log('fetchAsyncTryCards', results);
+  } catch (error) {
+    window.alert(error.message);
+  }
+}
 
 /**
  * TODO: Exercise 4: use `fetch`, `.then`, and `.catch` to get the same data from exercise 3 while handling errors
