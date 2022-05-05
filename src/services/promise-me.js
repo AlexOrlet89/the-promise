@@ -78,3 +78,7 @@ export function fetchFunction5ThenCards() {
 /**
  * TODO: Exercise 8: Call your function from exercise 6 using async/await
  */
+export async function fetchFunction6AsyncCards() {
+  const res = await fetchThenCatchFinallyCards();
+  console.log('ex 8', res);
+}
