@@ -47,7 +47,17 @@ export function fetchThenCatchCards() {
 /**
  * TODO: Exercise 5: use `fetch`, async/await, and a try/catch/finally statement to get data from an API, handle errors, then console.log('All done!') upon completion
  */
-
+export async function fetchAsyncTryFinallyCards() {
+  try {
+    const res = await fetch('https://futuramaapi.herokuapp.com/api/quotes/1');
+    const result = await res.json();
+    console.log('fetchAsyncTryFinallyCards', result);
+  } catch (error) {
+    window.alert(error);
+  } finally {
+    console.log('I think we are through here');
+  }
+}
 /**
  * TODO: Exercise 6: use `fetch`, `.then`, `.catch`. and `.finally` to get the same data from exercise 5 while handling errors and calling console.log('All done!') upon completion
  */
