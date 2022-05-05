@@ -7,7 +7,7 @@ export async function asyncGetCards() {
   const res = await fetch('https://futuramaapi.herokuapp.com/api/quotes/1');
   const results = await res.json();
 
-  console.log(results);
+  console.log('asyncGetCards', results);
   return results;
 }
 
