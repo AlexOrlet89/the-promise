@@ -1,6 +1,16 @@
+//https://api.magicthegathering.io/v1/cards
+
 /**
  * TODO: Exercise 1: use `fetch` & async/await to get data from an API
  */
+export async function asyncGetCards() {
+  const res = await fetch('https://futuramaapi.herokuapp.com/api/quotes/1');
+  const results = await res.json();
+
+  console.log(results);
+  return results;
+}
+
 /**
  * TODO: Exercise 2: use `fetch` & `.then` syntax to get the same data from the first exercise.
  */

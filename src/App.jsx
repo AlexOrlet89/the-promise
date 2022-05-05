@@ -1,3 +1,11 @@
+import { asyncGetCards } from './services/promise-me';
+
 export default function App() {
-  return <h1>Hello World</h1>;
+  asyncGetCards();
+
+  return (
+    <>
+      <h1>Hello World</h1>;
+    </>
+  );
 }
